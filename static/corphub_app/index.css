@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Raleway;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  filter: blur(3px);
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+.headers {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.subheader {
+  display: inline-block;
+  background-color: rgba(255,255,255,.9);
+  padding: 15px;
+  font-size: 25px;
+  border-radius: 3px;
+  margin-top: 15px;
+  box-shadow: 0 5px 5px rgb(0,0,0,.4);
+}
+
+.main-header {
+  display: inline-block;
+  background-color: rgba(255,255,255,.9);
+  padding: 30px;
+  font-size: 75px;
+  border-radius: 3px;
+  box-shadow: 0 5px 7.5px rgb(0,0,0,.4);
+}
+
+.search-bar-container {
+  display: grid;
+  grid-template-columns: 85% 15%;
+  grid-template-rows: 80px;
+  width: 100vw;
+  padding: 100px;
+}
+
+.search-bar-container > * {
+  font-size: 25px;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 10px rgb(0,0,0,.6);
+}
+
+.search-bar {
+  padding: 30px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.submit-button {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+  transition: all .2s;
+  background-color: #eee;
+}
+
+.submit-button:hover {
+  background-color: #ccc;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 50px;
+}
+
+.links {
+  margin: 100px;
+  margin-top: 10px;
+  margin-top: none;
+  background-color: rgba(255,255,255,.9);
+  border-radius: 5px;
+  padding: 50px;
+  box-shadow: 0 5px 10px rgb(0,0,0,.4);
+  text-align: right;
+}
+
+.left, .right {
+  text-align: center;
+  list-style: none;
+}
+
+.left li a {
+  color: black;
+}
+
+.right li a {
+  color: black;
+}
+
+.view-all {
+  text-decoration: none;
+  color: black;
+  background-color: #eee;
+  padding: 15px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px rgb(0,0,0,.3);
+  transition: all .2s;
+}
+
+.view-all:hover {
+  background-color: #ccc;
+}

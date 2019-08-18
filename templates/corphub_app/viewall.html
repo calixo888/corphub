@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>All Links</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'corphub_app/viewall.css' %}">
+  </head>
+  <body>
+    <div class="links">
+      <h1 class="all-header">All Links</h1>
+      <div class="grid-container">
+        <div class="left">
+          {% if links1 %}
+            {% for link in links1 %}
+              <li><a href="{{link}}">{{link|slice:50}}...</a></li>
+            {% endfor %}
+          {% endif %}
+        </div>
+        <div class="right">
+          {% if links2 %}
+            {% for link in links2 %}
+              <li><a href="{{link}}">{{link|slice:50}}...</a></li>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+      </div>
+  </body>
+</html>

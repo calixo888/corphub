@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CorpHub</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'corphub_app/index.css' %}">
+  </head>
+  <body>
+    <img class="background-image" src="https://cdn.pixabay.com/photo/2018/02/20/10/28/business-3167295__480.jpg" alt="">
+    <div class="container">
+      <div class="headers">
+        <h1 class="main-header">CorpHub</h1>
+        <br>
+        <h3 class="subheader">Corporate Search Tool</h3>
+      </div>
+      <form id="search-form" enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        <div class="search-bar-container">
+          {{form}}
+          <button form="search-form" class="submit-button">Submit</button>
+        </div>
+      </form>
+      <div class="links">
+        <a class="view-all" href="view-all/">View All &rarr;</a>
+        <div class="grid-container">
+          <div class="left">
+            {% if links1 %}
+              {% for link in links1 %}
+                <li><a href="{{link}}">{{link|slice:50}}...</a></li>
+              {% endfor %}
+            {% endif %}
+          </div>
+          <div class="right">
+            {% if links2 %}
+              {% for link in links2 %}
+                <li><a href="{{link}}">{{link|slice:50}}...</a></li>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+        </div>
+    </div>
+  </body>
+</html>

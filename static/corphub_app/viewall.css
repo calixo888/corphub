@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Raleway;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 50px;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, rgb(255, 255, 255), rgb(0, 223, 255));
+}
+
+.links {
+  margin: 100px;
+  margin-top: none;
+  background-color: rgba(255,255,255,.9);
+  border-radius: 5px;
+  padding: 50px;
+  box-shadow: 0 5px 10px rgb(0,0,0,.4);
+  text-align: center;
+}
+
+.all-header {
+  font-size: 75px;
+}
+
+.left, .right {
+  text-align: center;
+  list-style: none;
+}
+
+.left li a {
+  color: black;
+}
+
+.right li a {
+  color: black;
+}
